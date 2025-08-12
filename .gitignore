@@ -1,0 +1,10 @@
+.env
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load variables from .env into environment
+
+GEMINI_API_KEY = os.getenv("AIzaSyCwy4G8QdZJ0c8IUdusGgr8InWlf8OcABk")
+
+if not GEMINI_API_KEY:
+    raise ValueError("No GEMINI_API_KEY found. Please set it in your .env file.")
